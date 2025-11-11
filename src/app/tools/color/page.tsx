@@ -32,17 +32,17 @@ export default function ColorToolPage() {
 
   return (
     <ToolCard title="Color Converter" description="HEX ↔ RGB">
-      <div style={{ display: 'grid', gap: 8 }}>
+      <div className="grid gap-2">
         <label>
           HEX
-          <input value={hex} onChange={(e) => setHex(e.target.value)} style={{ width: '100%' }} />
+          <input value={hex} onChange={(e) => setHex(e.target.value)} />
         </label>
-        <div style={{ display: 'flex', gap: 8 }}>
+        <div className="flex gap-2">
           <button onClick={onHexToRgb}>HEX → RGB</button>
           <button onClick={onRgbToHex}>RGB → HEX</button>
         </div>
-        {error ? <div style={{ color: 'crimson' }}>Error: {error}</div> : null}
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: 8 }}>
+        {error ? <div className="text-red-600">Error: {error}</div> : null}
+        <div className="grid grid-cols-3 gap-2">
           <label>
             R
             <input value={rgb.r} onChange={(e) => setRgb({ ...rgb, r: e.target.value })} />
@@ -56,9 +56,8 @@ export default function ColorToolPage() {
             <input value={rgb.b} onChange={(e) => setRgb({ ...rgb, b: e.target.value })} />
           </label>
         </div>
-        <div style={{ height: 40, borderRadius: 6, border: '1px solid #eee', background: hex }} />
+        <div className="h-10 rounded-md border border-gray-200" style={{ background: hex }} />
       </div>
     </ToolCard>
   );
 }
-

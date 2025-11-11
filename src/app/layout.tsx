@@ -1,3 +1,5 @@
+import "./globals.css";
+
 export const metadata = {
   title: "DevKit",
   description: "A suite of developer utilities"
@@ -6,13 +8,14 @@ export const metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">
-      <body style={{ fontFamily: 'ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial' }}>
-        <header style={{ padding: '1rem', borderBottom: '1px solid #eee' }}>
-          <h1 style={{ margin: 0 }}>DevKit</h1>
+      <body className="min-h-screen">
+        <header className="border-b border-gray-200">
+          <div className="mx-auto max-w-5xl px-4 py-4">
+            <h1 className="m-0 text-2xl">DevKit</h1>
+          </div>
         </header>
-        <main style={{ padding: '1rem', maxWidth: 960, margin: '0 auto' }}>{children}</main>
+        <main className="mx-auto max-w-5xl px-4 py-6">{children}</main>
       </body>
     </html>
   );
 }
-
