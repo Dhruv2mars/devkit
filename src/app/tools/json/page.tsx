@@ -42,28 +42,27 @@ export default function JsonToolPage() {
 
   return (
     <ToolCard title="JSON Formatter" description="Pretty/minify and validate JSON">
-      <div style={{ display: 'grid', gap: 8 }}>
+      <div className="grid gap-2">
         <label>
           Input
           <textarea
             value={input}
             onChange={(e) => setInput(e.target.value)}
             rows={10}
-            style={{ width: '100%', fontFamily: 'monospace' }}
+            className="font-mono"
           />
         </label>
-        <div style={{ display: 'flex', gap: 8 }}>
+        <div className="flex gap-2">
           <button onClick={onPretty}>Pretty</button>
           <button onClick={onMinify}>Minify</button>
           <button onClick={onValidate}>Validate</button>
         </div>
-        {error ? <div style={{ color: 'crimson' }}>Error: {error}</div> : null}
+        {error ? <div className="text-red-600">Error: {error}</div> : null}
         <label>
           Output
-          <textarea value={output} readOnly rows={10} style={{ width: '100%', fontFamily: 'monospace' }} />
+          <textarea value={output} readOnly rows={10} className="font-mono" />
         </label>
       </div>
     </ToolCard>
   );
 }
-

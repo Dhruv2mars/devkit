@@ -10,15 +10,22 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "cron-parser": "latest",
+    "dompurify": "latest",
+    "marked": "latest",
     "next": "latest",
     "react": "latest",
     "react-dom": "latest"
   },
   "devDependencies": {
+    "@tailwindcss/postcss": "latest",
     "@types/node": "latest",
     "@types/react": "latest",
+    "autoprefixer": "latest",
     "eslint": "latest",
     "eslint-config-next": "latest",
+    "postcss": "latest",
+    "tailwindcss": "latest",
     "typescript": "latest"
   },
   "engines": {
@@ -26,4 +33,3 @@
   },
   "packageManager": "bun@1.1.0"
 }
-
