@@ -10,6 +10,8 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "dompurify": "latest",
+    "marked": "latest",
     "next": "latest",
     "react": "latest",
     "react-dom": "latest"
