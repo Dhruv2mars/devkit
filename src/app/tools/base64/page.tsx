@@ -26,22 +26,21 @@ export default function Base64ToolPage() {
 
   return (
     <ToolCard title="Base64 Encoder/Decoder" description="Unicode-safe base64 conversions">
-      <div style={{ display: 'grid', gap: 8 }}>
+      <div className="grid gap-2">
         <label>
           Plain
-          <textarea value={plain} onChange={(e) => setPlain(e.target.value)} rows={6} style={{ width: '100%', fontFamily: 'monospace' }} />
+          <textarea value={plain} onChange={(e) => setPlain(e.target.value)} rows={6} className="font-mono" />
         </label>
-        <div style={{ display: 'flex', gap: 8 }}>
+        <div className="flex gap-2">
           <button onClick={onEncode}>Encode →</button>
           <button onClick={onDecode}>← Decode</button>
         </div>
-        {error ? <div style={{ color: 'crimson' }}>Error: {error}</div> : null}
+        {error ? <div className="text-red-600">Error: {error}</div> : null}
         <label>
           Base64
-          <textarea value={b64} onChange={(e) => setB64(e.target.value)} rows={6} style={{ width: '100%', fontFamily: 'monospace' }} />
+          <textarea value={b64} onChange={(e) => setB64(e.target.value)} rows={6} className="font-mono" />
         </label>
       </div>
     </ToolCard>
   );
 }
-

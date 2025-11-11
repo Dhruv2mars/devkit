@@ -10,13 +10,12 @@ type ToolCardProps = {
 
 export default function ToolCard({ title, description, children }: ToolCardProps) {
   return (
-    <section style={{ border: '1px solid #e5e7eb', borderRadius: 8, padding: 16 }}>
-      <header style={{ marginBottom: 8 }}>
-        <h3 style={{ margin: 0 }}>{title}</h3>
-        {description ? <p style={{ margin: '4px 0', color: '#6b7280' }}>{description}</p> : null}
+    <section className="rounded-lg border border-gray-200 p-4">
+      <header className="mb-2">
+        <h3 className="m-0 text-lg">{title}</h3>
+        {description ? <p className="m-0 mt-1 text-sm text-gray-600">{description}</p> : null}
       </header>
-      <div>{children}</div>
+      <div className="space-y-2">{children}</div>
     </section>
   );
 }
-
