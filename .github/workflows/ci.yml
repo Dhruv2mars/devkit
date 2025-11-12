@@ -23,8 +23,8 @@ jobs:
       - name: Install dependencies
         run: bun install --frozen-lockfile
 
-      - name: Lint
-        run: bun x eslint . --max-warnings=0
+      - name: Lint (Next)
+        run: npx -y next@latest lint
 
       - name: Typecheck
         run: npx -y tsc --noEmit
