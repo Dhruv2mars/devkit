@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-# DevKit daily helper: branch, commit, push, PR.
+# devkitlibrary daily helper: branch, commit, push, PR.
 # Usage:
 #   scripts/devkit-day.sh start "json-formatter"
 #   scripts/devkit-day.sh commit "feat(json): add pretty/minify" [--pair]
@@ -70,7 +70,7 @@ case "$cmd" in
 
   *)
     cat <<EOF
-DevKit helper
+devkitlibrary helper
 Commands:
   start <name>               Create/switch to feature/<name>
   commit <msg> [--pair]      Commit all changes (optional co-author)
@@ -80,4 +80,3 @@ Commands:
 EOF
     ;;
 esac
-
