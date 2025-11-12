@@ -1,8 +1,8 @@
-import { parseExpression } from 'cron-parser';
+import cronParser from 'cron-parser';
 
 export function nextRuns(expr: string, count = 5): { ok: true; runs: Date[] } | { ok: false; error: string } {
   try {
-    const interval = parseExpression(expr);
+    const interval = (cronParser as any).parseExpression(expr);
     const runs: Date[] = [];
     for (let i = 0; i < count; i++) runs.push(interval.next().toDate());
     return { ok: true, runs };
