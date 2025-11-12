@@ -1,8 +1,8 @@
-import parser from 'cron-parser';
+import { parseExpression } from 'cron-parser';
 
 export function nextRuns(expr: string, count = 5): { ok: true; runs: Date[] } | { ok: false; error: string } {
   try {
-    const interval = parser.parseExpression(expr);
+    const interval = parseExpression(expr);
     const runs: Date[] = [];
     for (let i = 0; i < count; i++) runs.push(interval.next().toDate());
     return { ok: true, runs };
@@ -25,4 +25,3 @@ export function humanize(expr: string): string | null {
   if (min === '0' && hour === '0' && dom === '*' && mon === '*' && /^[0-6]$/.test(dow)) return `Every ${NAMES[Number(dow)]} at 00:00`;
   return null;
 }
-
