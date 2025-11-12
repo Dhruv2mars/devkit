@@ -6,7 +6,7 @@ import DOMPurify from "isomorphic-dompurify";
 import React from "react";
 
 export default function MarkdownToolPage() {
-  const [md, setMd] = React.useState<string>("# Hello DevKit\n\n- Markdown\n- Preview\n\n**Bold** and _italic_.");
+  const [md, setMd] = React.useState<string>("# Hello devkitlibrary\n\n- Markdown\n- Preview\n\n**Bold** and _italic_.");
   const html = React.useMemo(() => DOMPurify.sanitize(markdownToHtml(md)), [md]);
 
   return (
