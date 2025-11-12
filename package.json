@@ -12,6 +12,7 @@
   "dependencies": {
     "cron-parser": "latest",
     "dompurify": "latest",
+    "isomorphic-dompurify": "latest",
     "marked": "latest",
     "next": "latest",
     "react": "latest",
