@@ -1,6 +1,7 @@
 import Link from "next/link";
-
-const tools = [
+import type { Route } from "next";
+type Tool = { href: Route; title: string; desc: string };
+const tools: Tool[] = [
   { href: "/tools/json", title: "JSON Formatter", desc: "Pretty, minify, and validate JSON" },
   { href: "/tools/base64", title: "Base64 Encoder/Decoder", desc: "Unicode-safe base64" },
   { href: "/tools/color", title: "Color Converter", desc: "HEX ↔ RGB" },
