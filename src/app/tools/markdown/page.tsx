@@ -2,12 +2,12 @@
 
 import ToolCard from "@/components/ToolCard";
 import { markdownToHtml } from "@/lib/markdown";
-import DOMPurify from "dompurify";
+import { sanitize } from "isomorphic-dompurify";
 import React from "react";
 
 export default function MarkdownToolPage() {
   const [md, setMd] = React.useState<string>("# Hello DevKit\n\n- Markdown\n- Preview\n\n**Bold** and _italic_.");
-  const html = React.useMemo(() => DOMPurify.sanitize(markdownToHtml(md)), [md]);
+  const html = React.useMemo(() => sanitize(markdownToHtml(md)), [md]);
 
   return (
     <ToolCard title="Markdown Renderer" description="Convert Markdown to sanitized HTML">
@@ -24,4 +24,3 @@ export default function MarkdownToolPage() {
     </ToolCard>
   );
 }
-
