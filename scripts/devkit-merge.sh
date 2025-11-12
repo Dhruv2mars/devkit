@@ -16,14 +16,23 @@ fi
 
 case "$mode" in
   yolo)
-    gh pr merge "$pr" --merge --admin --delete-branch --subject "YOLO merge"
+    head=$(gh pr view "$pr" --json headRefName --jq .headRefName 2>/dev/null || echo "")
+    if [ "$head" = "dev" ]; then
+      gh pr merge "$pr" --merge --admin --subject "YOLO merge"
+    else
+      gh pr merge "$pr" --merge --admin --delete-branch --subject "YOLO merge"
+    fi
     ;;
   normal)
-    gh pr merge "$pr" --merge --delete-branch
+    head=$(gh pr view "$pr" --json headRefName --jq .headRefName 2>/dev/null || echo "")
+    if [ "$head" = "dev" ]; then
+      gh pr merge "$pr" --merge
+    else
+      gh pr merge "$pr" --merge --delete-branch
+    fi
     ;;
   *)
     echo "Usage: scripts/devkit-merge.sh {yolo|normal} <pr-number>" >&2
     exit 1
     ;;
 esac
-
