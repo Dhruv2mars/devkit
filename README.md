@@ -1,6 +1,6 @@
-# DevKit
+# devkitlibrary
 
-DevKit is a Next.js toolkit of everyday developer utilities (JSON, Base64, Color, Markdown, URL, Cron, JWT, UUID, QR, Date/Time, Math, File, System, and more), optimized for atomic commits and a clean PR workflow.
+devkitlibrary is a Next.js toolkit of everyday developer utilities (JSON, Base64, Color, Markdown, URL, Cron, JWT, UUID, QR, Date/Time, Math, File, System, and more), optimized for atomic commits and a clean PR workflow.
 
 ## Stack
 - Next.js (App Router) + TypeScript
@@ -35,4 +35,4 @@ More tools will be added following the 10-day roadmap.
 
 ## Deployment
 This repo is Vercel-ready. Create a new Vercel project, link the repo, set framework to Next.js, and use Bun as the package manager. Defaults are fine.
-
+\n<!-- quickdraw test -->
