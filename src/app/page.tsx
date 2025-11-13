@@ -7,7 +7,10 @@ const tools: Tool[] = [
   { href: "/tools/color", title: "Color Converter", desc: "HEX ↔ RGB" },
   { href: "/tools/markdown", title: "Markdown Renderer", desc: "MD → sanitized HTML" },
   { href: "/tools/url", title: "URL Utils", desc: "Parse and edit query params" },
-  { href: "/tools/cron", title: "Cron Helper", desc: "Humanize + next runs" }
+  { href: "/tools/cron", title: "Cron Helper", desc: "Humanize + next runs" },
+  { href: "/tools/jwt", title: "JWT Decoder", desc: "Decode header + payload" },
+  { href: "/tools/uuid", title: "UUID Tool", desc: "Generate/validate UUID v4" },
+  { href: "/tools/qr", title: "QR Code", desc: "Generate PNG QR" }
 ];
 
 export default function HomePage() {
