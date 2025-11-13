@@ -12,6 +12,8 @@
   "dependencies": {
     "cron-parser": "latest",
     "dompurify": "latest",
+    "isomorphic-dompurify": "latest",
+    "qrcode": "latest",
     "marked": "latest",
     "next": "latest",
     "react": "latest",
